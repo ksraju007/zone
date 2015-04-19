@@ -1,17 +1,4 @@
 # Ubuntu with basic tools and nginx installation
-# 
-# Build this image :
-# docker build -t u14 .
-#
-# After the build, run docker images command to see the image with tag u14.
-#
-# Recommeded start command
-#
-# docker run -name u14 -ti <image> /bin/bash
-#
-# Advanced usage . To map a folder from localsystem and open port 80
-# docker run -name u14 -ti -P 80:80 -v /git/site:/var/www <image> /bin/bash
-#
 
 FROM ubuntu:14.04
 MAINTAINER ksraju007@gmail.com

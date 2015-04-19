@@ -38,12 +38,17 @@ If you want to serve content from the container , you need to tell docker to do 
 It also supports mapping a local filesystem folder as a mounted volume inside. ( -v /local/folder:/container/folder )
 
 ```sh
-docker run -name u14 -ti -P 80:80 -v zone/site:/var/www u14 /bin/bash
+docker run -name u14 -ti -p 80:80 -v /path/to/repo/zone/site:/usr/share/nginx/html u14 /bin/bash
+service nginx start
+service nginx status
 ```
 
-Then inside the container , start nginx by running *service nginx start*
+Use another -p 81:80 , if you have some other thing listening on port 80 on the host already.
 
-The content should be available at http://localhost/ .
+The content should be available at http://localhost/  or http://localhost:81 (whatever you chose above).
+
+Now the changes you make inside files in site folder is immediately visible on the web browser.
+Once you are happy with changes you did , you can terminate the container and commit changes into repo. 
 
 ## Cleaning up
 
