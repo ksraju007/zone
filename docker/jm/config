@@ -1,0 +1,3 @@
+Host *
+  GlobalKnownHostsFile /dev/null
+  StrictHostKeyChecking no
