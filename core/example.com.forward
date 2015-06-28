@@ -1,0 +1,17 @@
+$TTL 86400
+$ORIGIN example.com.
+@   IN  SOA     core.example.com. webmaster.example.com. (
+        100 ; Serial
+        3000        ; Refresh
+        3600        ; Retry
+        3W      ; Expire
+        86400  )     ; Minimum TTL
+
+@       IN  NS          core.example.com.
+core       IN  A   10.0.0.1
+           IN MX  10  mail.example.com.
+server    IN  A   10.0.0.102
+www	IN CNAME  server
+mail	IN CNAME  server
+
+client          IN  A   10.0.0.103

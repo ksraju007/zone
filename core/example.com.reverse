@@ -1,0 +1,18 @@
+$TTL 86400
+$ORIGIN 0.0.10.in-addr.arpa.
+@   IN  SOA     core.example.com. webmaster.example.com.  (
+        2011071001  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+@       IN  NS          core.example.com.
+@       IN  PTR         example.com.
+core       IN  A   10.0.0.1
+server    IN  A   10.0.0.102
+client          IN  A   10.0.0.103
+1     IN  PTR         core.example.com.
+102     IN  PTR         server.example.com.
+103     IN  PTR         client.example.com.
+
