@@ -11,6 +11,10 @@ def rewind(f):
 
 def print_a_line(line_count, f):
     print line_count, f.readline()
+    
+#functions can also return values
+def reply(f):
+	return f.name
 
 current_file = open(input_file)
 
@@ -32,3 +36,5 @@ print_a_line(current_line, current_file)
 
 current_line = current_line + 1
 print_a_line(current_line, current_file)
+
+print "We were doing all this with %s" % reply(current_file)
